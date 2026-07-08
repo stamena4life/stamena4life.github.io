@@ -1,0 +1,38 @@
+paths:
+  static: ''
+  uploads: uploads
+timezone: America/Detroit
+markdown:
+  engine: commonmark
+  options: {}
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
+  aboutus:
+    path: aboutus
+    icon: acute
+  booking:
+    path: booking
+    icon: cooking
+  donate:
+    path: donate
+    icon: dehaze
+  hop:
+    path: hop
+    icon: hov
+  member:
+    path: member
+    icon: femur
+  members:
+    path: members
+    icon: numbers
+  plans_pricing:
+    path: plans-pricing
+    icon: lab_profile
+  pmc:
+    path: pmc
+    icon: 2mp
+  resources:
+    path: resources
+    icon: gesture

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting | Stamena4Life</title>
+  <script>
+    const redirects = {
+      "/aboutus": "/#about",
+      "/about-us": "/#about",
+      "/hop": "/#hop",
+      "/h-o-p-lane": "/#hop",
+      "/resources": "/#resources",
+      "/members": "/member/",
+      "/booking": "/#contact",
+      "/contact-us": "/#contact",
+      "/pmc": "/#support",
+      "/donate": "/#support",
+      "/plans-pricing": "/#support"
+    };
+    const target = redirects[window.location.pathname] || "/";
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="/">Stamena4Life</a>.</p>
+</body>
+</html>

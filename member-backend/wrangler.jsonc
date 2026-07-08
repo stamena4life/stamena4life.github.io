@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "s4l-member-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-06-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "ALLOWED_ORIGIN": "https://YOUR-GITHUB-USERNAME.github.io",
+    "SQUARE_API_BASE": "https://connect.squareup.com",
+    "SQUARE_VERSION": "2026-06-18",
+    "ALLOW_DEV_CODES": "false"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "MEMBERS",
+      "id": "REPLACE_WITH_MEMBERS_KV_ID"
+    },
+    {
+      "binding": "LOGIN_CODES",
+      "id": "REPLACE_WITH_LOGIN_CODES_KV_ID"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "RESOURCES",
+      "bucket_name": "s4l-member-resources"
+    }
+  ]
+}
