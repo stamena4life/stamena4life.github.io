@@ -1,6 +1,8 @@
 const memberConfig = {
   apiBase: "",
   subscribeUrl: "",
+  monthlySubscribeUrl: "",
+  annualSubscribeUrl: "",
   ...(window.S4L_MEMBER_CONFIG || {})
 };
 
@@ -85,9 +87,10 @@ async function checkSession() {
 }
 
 subscribeLinks.forEach((link) => {
-  if (memberConfig.subscribeUrl) {
-    link.href = memberConfig.subscribeUrl;
-  }
+  const plan = link.dataset.subscribePlan || "monthly";
+  const planUrl = plan === "annual" ? memberConfig.annualSubscribeUrl : memberConfig.monthlySubscribeUrl;
+  const url = planUrl || memberConfig.subscribeUrl;
+  if (url) link.href = url;
 });
 
 if (requestForm) {
