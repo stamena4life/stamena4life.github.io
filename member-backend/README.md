@@ -2,12 +2,13 @@
 
 Cloudflare Worker starter for subscriber-only Stamena4Life resources.
 
-This backend is meant to protect the four PDF resources:
+This backend is meant to protect the five PDF resources:
 
 - `core-fear-test.pdf`
 - `communication-styles.pdf`
 - `hop-lane-resource.pdf`
 - `book-sneak-peek.pdf`
+- `rr-handbook.pdf`
 
 The H.O.P. Lane promo video stays public on the main website.
 
@@ -53,6 +54,7 @@ wrangler r2 object put s4l-member-resources/core-fear-test.pdf --file ./core-fea
 wrangler r2 object put s4l-member-resources/communication-styles.pdf --file ./communication-styles.pdf
 wrangler r2 object put s4l-member-resources/hop-lane-resource.pdf --file ./hop-lane-resource.pdf
 wrangler r2 object put s4l-member-resources/book-sneak-peek.pdf --file ./book-sneak-peek.pdf
+wrangler r2 object put s4l-member-resources/rr-handbook.pdf --file ./rr-handbook.pdf
 ```
 
 Set secrets:

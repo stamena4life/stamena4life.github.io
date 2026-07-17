@@ -1,33 +1,35 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "s4l-member-api",
-  "main": "worker.js",
-  "compatibility_date": "2026-06-28",
-  "compatibility_flags": ["nodejs_compat"],
-  "observability": {
-    "enabled": true,
-    "head_sampling_rate": 1
-  },
-  "vars": {
-    "ALLOWED_ORIGIN": "https://YOUR-GITHUB-USERNAME.github.io",
-    "SQUARE_API_BASE": "https://connect.squareup.com",
-    "SQUARE_VERSION": "2026-06-18",
-    "ALLOW_DEV_CODES": "false"
-  },
-  "kv_namespaces": [
-    {
-      "binding": "MEMBERS",
-      "id": "REPLACE_WITH_MEMBERS_KV_ID"
-    },
-    {
-      "binding": "LOGIN_CODES",
-      "id": "REPLACE_WITH_LOGIN_CODES_KV_ID"
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "RESOURCES",
-      "bucket_name": "s4l-member-resources"
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "s4l-member-api",
+	"main": "worker.js",
+	"compatibility_date": "2026-06-28",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 1
+	},
+	"vars": {
+		"ALLOWED_ORIGIN": "https://stamena4life.com,https://www.stamena4life.com,https://stamena4life.github.io",
+		"SQUARE_API_BASE": "https://connect.squareup.com",
+		"SQUARE_VERSION": "2026-06-18",
+		"ALLOW_DEV_CODES": "false"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "MEMBERS",
+			"id": "a8978b4aaf7e491bbaa98efd964eb853"
+		},
+		{
+			"binding": "LOGIN_CODES",
+			"id": "a570ffc12522463bb14839e1ecb7032c"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "RESOURCES",
+			"bucket_name": "s4l-member-resources"
+		}
+	]
 }

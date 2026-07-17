@@ -5,7 +5,7 @@ const resources = {
     r2Key: "core-fear-test.pdf"
   },
   "communication-styles": {
-    title: "Communication Styles",
+    title: "Communication Tools",
     filename: "communication-styles.pdf",
     r2Key: "communication-styles.pdf"
   },
@@ -15,9 +15,14 @@ const resources = {
     r2Key: "hop-lane-resource.pdf"
   },
   "book-sneak-peek": {
-    title: "Book Sneak Peek",
+    title: "Book Sneak Peeks",
     filename: "book-sneak-peek.pdf",
     r2Key: "book-sneak-peek.pdf"
+  },
+  "rr-handbook": {
+    title: "The R&R Handbook",
+    filename: "rr-handbook.pdf",
+    r2Key: "rr-handbook.pdf"
   }
 };
 
