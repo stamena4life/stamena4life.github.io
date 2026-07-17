@@ -33,7 +33,7 @@
       <a href="../#resources">Resources</a>
       <a href="../#media">Media</a>
       <a href="../#contact">Contact</a>
-      <a class="nav-cta" href="mailto:stamena4life@gmail.com?subject=Subscriber%20Resource%20Access" data-subscribe-link>Subscribe</a>
+      <a class="nav-cta" href="#member-subscribe">Subscribe</a>
     </nav>
   </header>
 
@@ -45,7 +45,7 @@
           <h1 id="member-title">H.O.P. Lane subscriber resources.</h1>
           <p>Sign in to access the current PDF tools connected to H.O.P. Lane and the healing-on-purpose journey.</p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:stamena4life@gmail.com?subject=Subscriber%20Resource%20Access" data-subscribe-link>Subscribe</a>
+            <a class="button primary" href="#member-subscribe">Subscribe</a>
             <a class="button secondary" href="#member-login">Member Login</a>
           </div>
         </div>
@@ -69,6 +69,20 @@
           </form>
           <button class="text-button is-hidden" type="button" data-member-signout>Sign out</button>
         </aside>
+      </div>
+    </section>
+
+    <section class="section member-help-section" id="member-subscribe" aria-labelledby="subscribe-title">
+      <div class="support-panel member-support-panel">
+        <div>
+          <p class="eyebrow">Subscribe</p>
+          <h2 id="subscribe-title">Choose your membership.</h2>
+          <p>Membership gives you subscriber access to the protected resource library, early access to new content, and email updates when new resources are released.</p>
+        </div>
+        <div class="support-actions" aria-label="Membership subscription options">
+          <a class="button primary" href="https://square.link/u/4N8RlViE" target="_blank" rel="noreferrer" data-subscribe-link data-subscribe-plan="monthly">Subscribe Monthly</a>
+          <a class="button secondary" href="https://square.link/u/D0Qds1bI" target="_blank" rel="noreferrer" data-subscribe-link data-subscribe-plan="annual">Subscribe Annually</a>
+        </div>
       </div>
     </section>
 
@@ -120,7 +134,8 @@
           <p>If your email is not recognized after subscribing, send us a quick note and we can verify your access.</p>
         </div>
         <div class="support-actions">
-          <a class="button primary" href="mailto:stamena4life@gmail.com?subject=Subscriber%20Resource%20Access" data-subscribe-link>Subscribe</a>
+          <a class="button primary" href="https://square.link/u/4N8RlViE" target="_blank" rel="noreferrer" data-subscribe-link data-subscribe-plan="monthly">Subscribe Monthly</a>
+          <a class="button secondary" href="https://square.link/u/D0Qds1bI" target="_blank" rel="noreferrer" data-subscribe-link data-subscribe-plan="annual">Subscribe Annually</a>
           <a class="button secondary" href="mailto:stamena4life@gmail.com?subject=Member%20Access%20Help">Email Support</a>
         </div>
       </div>
@@ -154,7 +169,8 @@
   <script>
     window.S4L_MEMBER_CONFIG = {
       apiBase: "https://s4l-member-api.stamena4life.workers.dev",
-      subscribeUrl: "mailto:stamena4life@gmail.com?subject=Subscriber%20Resource%20Access"
+      monthlySubscribeUrl: "https://square.link/u/4N8RlViE",
+      annualSubscribeUrl: "https://square.link/u/D0Qds1bI"
     };
   </script>
   <script src="../script.js"></script>
