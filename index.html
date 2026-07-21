@@ -29,7 +29,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.png?v=round">
   <link rel="apple-touch-icon" href="assets/favicon.png?v=round">
-  <link rel="stylesheet" href="styles.css?v=20260720-ipad-socials">
+  <link rel="stylesheet" href="styles.css?v=20260720-ipad-socials-compact">
   <style>
     .icon-defs {
       position: absolute;
@@ -147,15 +147,16 @@
       }
 
       .social-media-card {
-        grid-template-columns: 1fr;
-        row-gap: 12px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 0;
         overflow: hidden;
       }
 
       .social-media-card .social-row {
-        width: 100%;
+        width: min(430px, 100%);
         min-width: 0;
         justify-content: space-between;
+        justify-self: end;
       }
     }
   </style>
