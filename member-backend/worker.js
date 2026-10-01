@@ -23,6 +23,11 @@ const resources = {
     title: "The R&R Handbook",
     filename: "rr-handbook.pdf",
     r2Key: "rr-handbook.pdf"
+  },
+  "our-time-and-values": {
+    title: "Our Time & Values",
+    filename: "our-time-and-values.pdf",
+    r2Key: "our-time-and-values.pdf"
   }
 };
 
