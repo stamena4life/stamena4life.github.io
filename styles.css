@@ -583,6 +583,11 @@ p {
   border-radius: var(--radius);
 }
 
+.profile-card .compact-button {
+  margin-top: 8px;
+  margin-left: 0;
+}
+
 .program-section {
   background: var(--paper);
 }
@@ -1324,6 +1329,763 @@ p {
   margin: 0;
 }
 
+.person-page {
+  background: var(--paper);
+}
+
+.person-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(82px, 10vw, 132px) clamp(18px, 4vw, 52px) clamp(30px, 5vw, 54px);
+  color: var(--white);
+  background:
+    radial-gradient(circle at 78% 24%, rgba(201, 154, 61, 0.2), transparent 31%),
+    linear-gradient(135deg, #050c0b 0%, rgba(8, 38, 35, 0.99) 44%, rgba(31, 94, 73, 0.92) 100%),
+    var(--deep);
+}
+
+.person-hero::after {
+  position: absolute;
+  right: -14vw;
+  bottom: -22vw;
+  width: min(620px, 58vw);
+  aspect-ratio: 1;
+  content: "";
+  background: radial-gradient(circle, rgba(201, 154, 61, 0.14), transparent 64%);
+  pointer-events: none;
+}
+
+.person-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.58fr);
+  gap: clamp(34px, 6vw, 78px);
+  align-items: center;
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+}
+
+.person-hero h1 {
+  max-width: 920px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7.2vw, 7rem);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+}
+
+.person-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: clamp(20px, 3vw, 28px) 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.08rem, 1.6vw, 1.35rem);
+}
+
+.person-image-panel {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  margin: 0;
+}
+
+.person-portrait {
+  width: min(410px, 100%);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  justify-self: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.person-image-panel figcaption {
+  max-width: 360px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.55;
+}
+
+.person-proof-strip {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  width: min(var(--max), 100%);
+  margin: clamp(44px, 6vw, 72px) auto 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.person-proof-strip li {
+  display: grid;
+  gap: 5px;
+  min-height: 104px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.person-proof-strip strong {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--white);
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  line-height: 1;
+}
+
+.person-proof-strip span {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 800;
+}
+
+.person-intro-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.55fr);
+  gap: clamp(26px, 5vw, 72px);
+  align-items: center;
+  padding: clamp(46px, 7vw, 78px) clamp(18px, 4vw, 52px);
+  color: var(--white);
+  background: #070908;
+}
+
+.person-intro-band > * {
+  width: min(var(--max), 100%);
+}
+
+.person-intro-band h2 {
+  max-width: 950px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4.6vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.person-intro-band p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.08rem;
+}
+
+.person-benefit-section {
+  background: var(--paper);
+}
+
+.person-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+}
+
+.person-benefit-card {
+  min-height: 260px;
+  padding: clamp(22px, 3vw, 30px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(23, 34, 31, 0.06);
+}
+
+.person-benefit-card span {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 28px;
+  place-items: center;
+  color: var(--deep);
+  background: #f3dfb3;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.person-benefit-card h3 {
+  max-width: 340px;
+  margin: 0 0 12px;
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+}
+
+.person-benefit-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.person-transform-section {
+  padding-top: 0;
+  background: var(--paper);
+}
+
+.person-transform {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.62fr);
+  gap: clamp(24px, 5vw, 70px);
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 66px);
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(13, 51, 47, 0.98), rgba(31, 94, 73, 0.93)),
+    var(--deep);
+  border-radius: var(--radius);
+}
+
+.person-transform h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 5vw, 4.8rem);
+  line-height: 0.96;
+}
+
+.person-transform p:not(.eyebrow) {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+.person-transform p:last-child {
+  margin-bottom: 0;
+}
+
+.person-process-grid article {
+  min-height: 245px;
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.person-quote-section {
+  padding: clamp(44px, 7vw, 84px) clamp(18px, 4vw, 52px);
+  background: #080b0a;
+}
+
+.person-quote {
+  display: grid;
+  gap: 26px;
+  justify-items: start;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.person-quote p {
+  margin: 0;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5.4vw, 5.25rem);
+  line-height: 0.98;
+}
+
+.tamara-hero {
+  background:
+    radial-gradient(circle at 82% 24%, rgba(139, 62, 70, 0.28), transparent 32%),
+    linear-gradient(135deg, #050c0b 0%, rgba(8, 38, 35, 0.99) 44%, rgba(31, 94, 73, 0.92) 100%),
+    var(--deep);
+}
+
+.steven-person-page {
+  --speaker-yellow: #f0b629;
+  --speaker-ink: #050505;
+  --speaker-soft: #fffaf0;
+  --speaker-green: #1f5e49;
+  --speaker-line: rgba(5, 5, 5, 0.16);
+}
+
+.steven-person-page .person-hero {
+  color: var(--white);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(240, 182, 41, 0.34), transparent 28%),
+    linear-gradient(132deg, #030303 0%, #050505 47%, #171207 100%);
+}
+
+.steven-person-page .person-hero::after {
+  right: -18vw;
+  bottom: -18vw;
+  background: radial-gradient(circle, rgba(240, 182, 41, 0.22), transparent 66%);
+}
+
+.steven-person-page .person-hero-inner {
+  grid-template-columns: minmax(0, 0.98fr) minmax(380px, 0.68fr);
+  gap: clamp(42px, 7vw, 96px);
+}
+
+.steven-person-page .person-hero-copy {
+  position: relative;
+  z-index: 5;
+}
+
+.steven-person-page .person-hero-copy::before {
+  position: absolute;
+  inset: -28px -18px -30px -28px;
+  z-index: -1;
+  content: "";
+  background:
+    radial-gradient(circle at 22% 24%, rgba(240, 182, 41, 0.12), transparent 34%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.18), transparent);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.steven-person-page .person-hero .eyebrow,
+.steven-person-page .person-intro-band .eyebrow,
+.steven-person-page .person-transform .eyebrow,
+.steven-person-page .section-header .eyebrow {
+  color: var(--speaker-yellow);
+}
+
+.steven-person-page .person-hero h1 {
+  max-width: 860px;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: clamp(3rem, 5.95vw, 6.1rem);
+  font-weight: 950;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.72),
+    0 24px 44px rgba(0, 0, 0, 0.86);
+  text-wrap: balance;
+  text-transform: uppercase;
+}
+
+.steven-person-page .person-hero p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.steven-person-page main > :not(.contact-section) .button.primary {
+  color: #090909;
+  background: var(--speaker-yellow);
+  border-radius: 4px;
+  border-color: var(--speaker-yellow);
+  box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.16);
+}
+
+.steven-person-page main > :not(.contact-section) .button.secondary {
+  color: var(--white);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.42);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.steven-person-page main > :not(.contact-section) .button.secondary:hover {
+  color: var(--white);
+  background: rgba(31, 94, 73, 0.62);
+}
+
+.steven-speaker-collage {
+  position: relative;
+  z-index: 1;
+  width: min(620px, 100%);
+  min-height: clamp(500px, 44vw, 610px);
+  justify-self: end;
+  isolation: isolate;
+  transform: translateX(clamp(0px, 2vw, 28px));
+}
+
+.steven-speaker-collage::before {
+  position: absolute;
+  inset: 52px 28px 44px 58px;
+  z-index: -1;
+  content: "";
+  background: var(--speaker-yellow);
+  transform: rotate(-4deg);
+}
+
+.steven-speaker-collage::after {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  z-index: -1;
+  width: 64%;
+  height: 54%;
+  content: "";
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  transform: rotate(3deg);
+}
+
+.speaker-photo {
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  background: #111;
+  border: 5px solid var(--white);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+}
+
+.speaker-photo-main {
+  top: 18px;
+  right: 0;
+  z-index: 2;
+  width: 88%;
+  aspect-ratio: 16 / 10;
+  object-position: 50% 18%;
+}
+
+.speaker-photo-stage {
+  left: -16px;
+  bottom: 34px;
+  z-index: 3;
+  width: 62%;
+  aspect-ratio: 16 / 10;
+  object-position: 46% 25%;
+}
+
+.steven-person-page .person-proof-strip {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(240, 182, 41, 0.42);
+}
+
+.steven-person-page .person-proof-strip li {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.steven-person-page .person-proof-strip strong {
+  color: var(--speaker-yellow);
+  font-family: var(--font);
+  font-weight: 950;
+}
+
+.steven-person-page .person-intro-band,
+.steven-person-page .person-quote-section {
+  background: var(--speaker-ink);
+}
+
+.steven-person-page .person-intro-band {
+  position: relative;
+  overflow: hidden;
+  border-top: 8px solid var(--speaker-yellow);
+  border-bottom: 1px solid rgba(240, 182, 41, 0.38);
+}
+
+.steven-person-page .person-intro-band::after {
+  position: absolute;
+  right: clamp(18px, 6vw, 86px);
+  bottom: -70px;
+  width: clamp(180px, 22vw, 310px);
+  aspect-ratio: 1;
+  content: "";
+  border: 2px solid rgba(240, 182, 41, 0.34);
+  border-radius: 50%;
+}
+
+.steven-person-page .person-intro-band h2 {
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.04;
+  text-transform: none;
+}
+
+.steven-person-page .person-intro-band p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+  border-left: 5px solid var(--speaker-yellow);
+  padding-left: 18px;
+}
+
+.steven-person-page .person-benefit-section,
+.steven-person-page .person-transform-section,
+.steven-person-page .process-section {
+  background: var(--speaker-soft);
+}
+
+.steven-person-page .section-header.compact h2 {
+  color: var(--speaker-ink);
+  font-family: var(--font);
+  font-weight: 950;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.steven-person-page .person-benefit-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border-color: var(--speaker-line);
+  border-radius: 2px;
+  box-shadow: 10px 10px 0 rgba(5, 5, 5, 0.06);
+}
+
+.steven-person-page .person-benefit-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: linear-gradient(90deg, var(--speaker-yellow), var(--speaker-green));
+}
+
+.steven-person-page .person-benefit-card:nth-child(even) {
+  background: #0a0a0a;
+  border-color: rgba(240, 182, 41, 0.28);
+  box-shadow: 10px 10px 0 rgba(240, 182, 41, 0.14);
+}
+
+.steven-person-page .person-benefit-card:nth-child(even) h3,
+.steven-person-page .person-benefit-card:nth-child(even) p {
+  color: var(--white);
+}
+
+.steven-person-page .person-benefit-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.35vw, 1.92rem);
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.steven-person-page .person-benefit-card span {
+  color: var(--speaker-ink);
+  background: var(--speaker-yellow);
+  border-radius: 2px;
+}
+
+.steven-person-page .person-benefit-card:nth-child(even) span {
+  background: var(--white);
+}
+
+.steven-person-page .person-transform {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.98), rgba(24, 20, 10, 0.95)),
+    var(--speaker-ink);
+  border: 1px solid rgba(240, 182, 41, 0.34);
+  border-radius: 2px;
+  box-shadow: 18px 18px 0 rgba(240, 182, 41, 0.2);
+}
+
+.steven-person-page .person-transform::before {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 220px;
+  aspect-ratio: 1;
+  content: "";
+  background: var(--speaker-yellow);
+  border-radius: 50%;
+  opacity: 0.16;
+}
+
+.steven-person-page .person-transform > * {
+  position: relative;
+  z-index: 1;
+}
+
+.steven-person-page .person-transform .eyebrow {
+  color: var(--speaker-yellow);
+}
+
+.steven-person-page .person-transform h2 {
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.steven-person-page .person-transform p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.steven-story-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 68px);
+  align-items: center;
+  padding: clamp(54px, 8vw, 96px) clamp(18px, 4vw, 52px);
+  background: var(--speaker-ink);
+}
+
+.steven-story-copy,
+.steven-story-photos {
+  width: min(var(--max), 100%);
+}
+
+.steven-story-copy {
+  justify-self: end;
+  max-width: 520px;
+  color: var(--white);
+}
+
+.steven-story-copy h2 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: clamp(2rem, 4.2vw, 4.35rem);
+  font-weight: 950;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.steven-story-copy p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.steven-story-photos {
+  display: grid;
+  grid-template-columns: 0.78fr 1fr;
+  grid-template-rows: repeat(2, minmax(160px, 1fr));
+  gap: 14px;
+  justify-self: start;
+  max-width: 720px;
+}
+
+.steven-story-photos img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  filter: grayscale(0.86) contrast(1.08);
+  border: 4px solid var(--white);
+  box-shadow: 10px 10px 0 rgba(240, 182, 41, 0.38);
+}
+
+.steven-story-photos img:first-child {
+  grid-row: 1 / -1;
+  min-height: 470px;
+}
+
+.steven-story-photos img:nth-child(2) {
+  filter: grayscale(1) contrast(1.08);
+  object-position: 50% 70%;
+}
+
+.steven-story-photos img:nth-child(3) {
+  object-position: 50% 50%;
+}
+
+.steven-photo-quote {
+  position: relative;
+  display: grid;
+  min-height: clamp(360px, 44vw, 620px);
+  align-items: center;
+  padding: clamp(46px, 7vw, 86px) clamp(18px, 4vw, 52px);
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.78) 48%, rgba(5, 5, 5, 0.28) 100%),
+    url("assets/steven-tamara-stage-wide.webp") center / cover no-repeat,
+    var(--speaker-ink);
+  border-top: 8px solid var(--speaker-yellow);
+  border-bottom: 8px solid var(--speaker-yellow);
+}
+
+.steven-photo-quote-inner {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+}
+
+.steven-photo-quote .eyebrow {
+  margin-bottom: clamp(14px, 2vw, 22px);
+  color: var(--speaker-yellow);
+}
+
+.steven-photo-quote blockquote {
+  max-width: 980px;
+  margin: 0;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 4.45rem);
+  font-weight: 950;
+  line-height: 1.08;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.56);
+}
+
+.steven-person-page .process-grid h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+  font-style: italic;
+  line-height: 1.06;
+}
+
+.steven-person-page .process-grid span {
+  color: var(--speaker-green);
+}
+
+.steven-person-page .process-grid article {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: clamp(30px, 4vw, 44px);
+  background: var(--white);
+  border-color: var(--speaker-line);
+  border-radius: 2px;
+  box-shadow: 8px 8px 0 rgba(5, 5, 5, 0.06);
+}
+
+.steven-person-page .process-grid article::after {
+  position: absolute;
+  right: -32px;
+  bottom: -32px;
+  width: 96px;
+  aspect-ratio: 1;
+  content: "";
+  background: var(--speaker-yellow);
+  border-radius: 50%;
+  opacity: 0.22;
+}
+
+.steven-person-page .person-quote {
+  max-width: var(--max);
+  padding: clamp(28px, 5vw, 54px);
+  background: var(--speaker-ink);
+  border-radius: 2px;
+}
+
+.steven-person-page .person-quote p {
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.steven-person-page .person-quote .button.primary {
+  color: var(--white);
+  background: var(--speaker-ink);
+  border-color: var(--speaker-ink);
+}
+
+.steven-person-page .person-quote .button.secondary {
+  color: var(--speaker-ink);
+  background: var(--white);
+  border-color: rgba(5, 5, 5, 0.18);
+}
+
+.process-section {
+  padding-top: 0;
+  background: var(--soft);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+}
+
+.process-grid article {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(23, 34, 31, 0.06);
+}
+
+.process-grid span {
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.process-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .media-section {
   background: var(--paper);
 }
@@ -1660,7 +2422,8 @@ textarea:focus {
   .resource-grid,
   .offering-grid,
   .member-resource-grid,
-  .detail-grid {
+  .detail-grid,
+  .person-benefit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1747,6 +2510,50 @@ textarea:focus {
   .support-panel,
   .media-grid {
     grid-template-columns: 1fr;
+  }
+
+  .person-hero-inner,
+  .person-intro-band,
+  .person-proof-strip,
+  .person-benefit-grid,
+  .steven-story-section,
+  .person-transform,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .person-portrait {
+    justify-self: start;
+    width: min(300px, 100%);
+  }
+
+  .person-image-panel {
+    justify-items: start;
+  }
+
+  .steven-person-page .person-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .steven-speaker-collage {
+    width: min(620px, 100%);
+    min-height: 520px;
+    justify-self: start;
+    transform: none;
+  }
+
+  .steven-story-copy {
+    justify-self: start;
+    max-width: 760px;
+  }
+
+  .steven-story-photos {
+    justify-self: stretch;
+    max-width: none;
+  }
+
+  .person-proof-strip li {
+    min-height: auto;
   }
 
   .event-grid {
@@ -1888,5 +2695,40 @@ textarea:focus {
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .steven-speaker-collage {
+    min-height: 440px;
+  }
+
+  .steven-story-photos {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .steven-story-photos img,
+  .steven-story-photos img:first-child {
+    min-height: 260px;
+    grid-row: auto;
+  }
+
+  .steven-speaker-collage::before {
+    inset: 34px 12px 40px 28px;
+  }
+
+  .speaker-photo-main {
+    width: 92%;
+  }
+
+  .speaker-photo-stage {
+    left: 0;
+    bottom: 42px;
+    width: 68%;
+  }
+
+  .speaker-note {
+    right: 0;
+    bottom: 0;
+    max-width: min(260px, 80%);
   }
 }
