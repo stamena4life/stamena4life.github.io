@@ -361,6 +361,10 @@ a {
   transform: none;
 }
 
+.appointment-placeholder {
+  cursor: default;
+}
+
 .hero .button.quiet,
 .hero .button.secondary {
   border-color: rgba(255, 255, 255, 0.22);
@@ -2546,7 +2550,7 @@ p {
   color: var(--white);
   background:
     linear-gradient(90deg, rgba(16, 22, 45, 0.96) 0%, rgba(16, 22, 45, 0.82) 46%, rgba(16, 22, 45, 0.3) 100%),
-    url("assets/tamara-3abn-studio.webp") center / cover no-repeat,
+    url("assets/steven-tamara-stage-demo.webp") center / cover no-repeat,
     var(--tamara-ink);
   border-top: 10px solid var(--tamara-green);
   border-bottom: 10px solid var(--tamara-purple);
@@ -3065,6 +3069,417 @@ p {
   border-color: rgba(5, 5, 5, 0.18);
 }
 
+.tamara-person-page {
+  --tamara-blue: #111b4f;
+  --tamara-ink: #080c24;
+  --tamara-purple: #6f43a6;
+  --tamara-green: #1f8f6f;
+  --tamara-mint: #dff7ed;
+  --tamara-paper: #f7f8ff;
+  --tamara-line: rgba(17, 27, 79, 0.16);
+  background: var(--tamara-paper);
+}
+
+.tamara-person-page .person-hero {
+  color: var(--white);
+  background:
+    radial-gradient(circle at 76% 18%, rgba(111, 67, 166, 0.46), transparent 28%),
+    radial-gradient(circle at 18% 86%, rgba(31, 143, 111, 0.24), transparent 32%),
+    linear-gradient(132deg, #080c24 0%, #111b4f 48%, #2f1a4f 100%);
+}
+
+.tamara-person-page .person-hero::after {
+  right: -18vw;
+  bottom: -18vw;
+  background: radial-gradient(circle, rgba(223, 247, 237, 0.18), transparent 66%);
+}
+
+.tamara-person-page .person-hero-inner {
+  grid-template-columns: minmax(0, 0.98fr) minmax(380px, 0.68fr);
+  gap: clamp(42px, 7vw, 96px);
+}
+
+.tamara-person-page .person-hero-copy {
+  position: relative;
+  z-index: 5;
+}
+
+.tamara-person-page .person-hero-copy::before {
+  position: absolute;
+  inset: -28px -18px -30px -28px;
+  z-index: -1;
+  content: "";
+  background:
+    radial-gradient(circle at 22% 24%, rgba(31, 143, 111, 0.16), transparent 34%),
+    linear-gradient(90deg, rgba(8, 12, 36, 0.62), rgba(8, 12, 36, 0.18), transparent);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.tamara-person-page .person-hero .eyebrow,
+.tamara-person-page .person-intro-band .eyebrow,
+.tamara-person-page .person-transform .eyebrow,
+.tamara-person-page .section-header .eyebrow,
+.tamara-person-page .tamara-story-copy .eyebrow,
+.tamara-person-page .tamara-photo-quote .eyebrow {
+  color: var(--tamara-mint);
+}
+
+.tamara-person-page .person-hero h1 {
+  max-width: 860px;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: clamp(3rem, 5.8vw, 6rem);
+  font-weight: 950;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-shadow:
+    0 4px 0 rgba(8, 12, 36, 0.72),
+    0 24px 44px rgba(8, 12, 36, 0.8);
+  text-wrap: balance;
+  text-transform: uppercase;
+}
+
+.tamara-person-page .person-hero p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.tamara-person-page main > :not(.contact-section) .button.primary {
+  color: var(--tamara-ink);
+  background: var(--tamara-mint);
+  border-color: var(--tamara-mint);
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.14);
+}
+
+.tamara-person-page main > :not(.contact-section) .button.secondary {
+  color: var(--white);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.42);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.tamara-person-page main > :not(.contact-section) .button.secondary:hover {
+  color: var(--white);
+  background: rgba(111, 67, 166, 0.58);
+}
+
+.tamara-person-page .tamara-hero-collage {
+  position: relative;
+  z-index: 1;
+  width: min(620px, 100%);
+  min-height: clamp(500px, 44vw, 610px);
+  justify-self: end;
+  margin: 0;
+  isolation: isolate;
+  transform: translateX(clamp(0px, 2vw, 28px));
+}
+
+.tamara-person-page .tamara-hero-collage::before {
+  position: absolute;
+  inset: 52px 28px 44px 58px;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(135deg, var(--tamara-green), var(--tamara-purple));
+  border-radius: 2px;
+  transform: rotate(-4deg);
+}
+
+.tamara-person-page .tamara-hero-collage::after {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  z-index: -1;
+  width: 64%;
+  height: 54%;
+  content: "";
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  border-radius: 2px;
+  transform: rotate(3deg);
+}
+
+.tamara-person-page .tamara-hero-photo {
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  background: #111;
+  border: 5px solid var(--white);
+  border-radius: 2px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+}
+
+.tamara-person-page .tamara-hero-photo-main {
+  top: 18px;
+  right: 0;
+  z-index: 2;
+  width: 78%;
+  aspect-ratio: 4 / 5;
+  object-position: 50% 24%;
+}
+
+.tamara-person-page .tamara-hero-photo-side {
+  left: -16px;
+  bottom: 34px;
+  z-index: 3;
+  width: 58%;
+  aspect-ratio: 4 / 5;
+  object-position: 50% 42%;
+}
+
+.tamara-person-page .tamara-hero-collage figcaption {
+  display: none;
+}
+
+.tamara-person-page .person-proof-strip {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(223, 247, 237, 0.42);
+  border-radius: 2px;
+}
+
+.tamara-person-page .person-proof-strip li {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tamara-person-page .person-proof-strip strong {
+  color: var(--tamara-mint);
+  font-family: var(--font);
+  font-weight: 950;
+}
+
+.tamara-person-page .person-intro-band,
+.tamara-person-page .person-quote-section {
+  background: var(--tamara-ink);
+}
+
+.tamara-person-page .person-intro-band {
+  position: relative;
+  overflow: hidden;
+  border-top: 8px solid var(--tamara-green);
+  border-bottom: 1px solid rgba(223, 247, 237, 0.38);
+}
+
+.tamara-person-page .person-intro-band::after {
+  position: absolute;
+  right: clamp(18px, 6vw, 86px);
+  bottom: -70px;
+  width: clamp(180px, 22vw, 310px);
+  aspect-ratio: 1;
+  content: "";
+  border: 2px solid rgba(111, 67, 166, 0.44);
+  border-radius: 50%;
+}
+
+.tamara-person-page .person-intro-band h2 {
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.04;
+  text-transform: none;
+}
+
+.tamara-person-page .person-intro-band p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+  border-left: 5px solid var(--tamara-green);
+  padding-left: 18px;
+}
+
+.tamara-person-page .person-benefit-section,
+.tamara-person-page .person-transform-section,
+.tamara-person-page .process-section {
+  background: var(--tamara-paper);
+}
+
+.tamara-person-page .section-header.compact h2 {
+  color: var(--tamara-ink);
+  font-family: var(--font);
+  font-weight: 950;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.tamara-person-page .person-benefit-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border-color: var(--tamara-line);
+  border-radius: 2px;
+  box-shadow: 10px 10px 0 rgba(17, 27, 79, 0.07);
+}
+
+.tamara-person-page .person-benefit-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: linear-gradient(90deg, var(--tamara-green), var(--tamara-purple));
+}
+
+.tamara-person-page .person-benefit-card:nth-child(even) {
+  background: var(--tamara-ink);
+  border-color: rgba(223, 247, 237, 0.24);
+  box-shadow: 10px 10px 0 rgba(111, 67, 166, 0.15);
+}
+
+.tamara-person-page .person-benefit-card:nth-child(even) h3,
+.tamara-person-page .person-benefit-card:nth-child(even) p {
+  color: var(--white);
+}
+
+.tamara-person-page .person-benefit-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.35vw, 1.92rem);
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.tamara-person-page .person-benefit-card span {
+  color: var(--tamara-ink);
+  background: var(--tamara-mint);
+  border-radius: 2px;
+}
+
+.tamara-person-page .person-benefit-card:nth-child(even) span {
+  background: var(--white);
+}
+
+.tamara-person-page .person-transform {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(8, 12, 36, 0.98), rgba(33, 24, 68, 0.95)),
+    var(--tamara-ink);
+  border: 1px solid rgba(223, 247, 237, 0.3);
+  border-radius: 2px;
+  box-shadow: 18px 18px 0 rgba(31, 143, 111, 0.18);
+}
+
+.tamara-person-page .person-transform::before {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 220px;
+  aspect-ratio: 1;
+  content: "";
+  background: var(--tamara-green);
+  border-radius: 50%;
+  opacity: 0.18;
+}
+
+.tamara-person-page .person-transform > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tamara-person-page .person-transform h2 {
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.tamara-person-page .person-transform p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tamara-person-page .tamara-story-section {
+  background: var(--tamara-ink);
+}
+
+.tamara-person-page .tamara-story-copy h2 {
+  font-family: var(--font);
+  font-size: clamp(2.65rem, 3.18vw, 3.35rem);
+  font-weight: 950;
+  line-height: 1.02;
+  max-width: 100%;
+  text-transform: uppercase;
+}
+
+.tamara-person-page .tamara-story-photos img {
+  filter: grayscale(1) contrast(1.1);
+  border-radius: 2px;
+  box-shadow: 10px 10px 0 rgba(31, 143, 111, 0.34);
+}
+
+.tamara-person-page .tamara-story-photos img:first-child {
+  object-position: 42% 34%;
+}
+
+.tamara-person-page .tamara-story-photos img:nth-child(2) {
+  object-position: 48% 38%;
+}
+
+.tamara-person-page .tamara-story-photos img:nth-child(3) {
+  object-position: 38% 43%;
+}
+
+.tamara-person-page .tamara-photo-quote {
+  background:
+    linear-gradient(90deg, rgba(8, 12, 36, 0.95) 0%, rgba(8, 12, 36, 0.78) 48%, rgba(8, 12, 36, 0.28) 100%),
+    url("assets/steven-tamara-stage-demo.webp") center / cover no-repeat,
+    var(--tamara-ink);
+  border-top: 8px solid var(--tamara-green);
+  border-bottom: 8px solid var(--tamara-purple);
+}
+
+.tamara-person-page .tamara-photo-quote blockquote {
+  font-size: clamp(2rem, 4vw, 4.45rem);
+}
+
+.tamara-person-page .process-grid h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+  font-style: italic;
+  line-height: 1.06;
+}
+
+.tamara-person-page .process-grid span {
+  color: var(--tamara-green);
+}
+
+.tamara-person-page .process-grid article {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: clamp(30px, 4vw, 44px);
+  background: var(--white);
+  border-color: var(--tamara-line);
+  border-radius: 2px;
+  box-shadow: 8px 8px 0 rgba(17, 27, 79, 0.07);
+}
+
+.tamara-person-page .process-grid article::after {
+  position: absolute;
+  right: -32px;
+  bottom: -32px;
+  width: 96px;
+  aspect-ratio: 1;
+  content: "";
+  background: var(--tamara-purple);
+  border-radius: 50%;
+  opacity: 0.18;
+}
+
+.tamara-person-page .person-quote {
+  max-width: var(--max);
+  padding: clamp(28px, 5vw, 54px);
+  background: var(--tamara-ink);
+  border-radius: 2px;
+}
+
+.tamara-person-page .person-quote p {
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
 .process-section {
   padding-top: 0;
   background: var(--soft);
@@ -3443,6 +3858,17 @@ textarea:focus {
   .video-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .tamara-person-page .tamara-story-copy h2 {
+    font-size: clamp(2.35rem, 4.45vw, 2.78rem);
+    line-height: 1.04;
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1500px) {
+  .tamara-person-page .tamara-story-copy h2 {
+    font-size: clamp(2.7rem, 3.05vw, 3.1rem);
+  }
 }
 
 @media (max-width: 860px) {
@@ -3677,6 +4103,10 @@ textarea:focus {
   .tamara-story-photos {
     justify-self: stretch;
     max-width: none;
+  }
+
+  .tamara-person-page .tamara-story-photos {
+    margin-top: 10px;
   }
 
   .person-proof-strip li {
