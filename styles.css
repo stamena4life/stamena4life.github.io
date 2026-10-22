@@ -3388,6 +3388,10 @@ p {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.tamara-person-page .tamara-green-words {
+  color: var(--tamara-green);
+}
+
 .tamara-person-page .tamara-story-section {
   background: var(--tamara-ink);
 }
