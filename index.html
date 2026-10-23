@@ -756,6 +756,34 @@
     </div>
   </footer>
 
+  <div class="subscription-popup" data-subscription-popup hidden>
+    <button class="subscription-popup-backdrop" type="button" data-subscription-close aria-label="Close subscription invitation"></button>
+    <section class="subscription-popup-panel" role="dialog" aria-modal="true" aria-labelledby="subscription-popup-title" aria-describedby="subscription-popup-description">
+      <button class="subscription-popup-close" type="button" data-subscription-close aria-label="Close subscription invitation">&times;</button>
+      <div class="subscription-popup-collage" aria-hidden="true">
+        <img class="subscription-popup-collage-image" src="assets/subscription-collage-final.png" alt="">
+      </div>
+      <div class="subscription-popup-copy">
+        <div class="subscription-popup-brand">
+          <img src="assets/logo.png" alt="">
+          <span>Stamena4Life</span>
+        </div>
+        <h2 id="subscription-popup-title">The first 100 subscribers get a free copy of <em>How to Communicate With Your Children</em></h2>
+        <p id="subscription-popup-description">Subscribe for access to our growing resource library and updates across books, podcasts, YouTube, 3ABN, programs, coaching, seminars, and events.</p>
+        <div class="subscription-popup-benefits" aria-label="Subscriber benefits">
+          <div><strong>Resources</strong><span>Guides, tools, and book previews</span></div>
+          <div><strong>New releases</strong><span>Books, podcasts, and new programs</span></div>
+          <div><strong>Watch &amp; listen</strong><span>YouTube and 3ABN appearances</span></div>
+          <div><strong>Stay informed</strong><span>Seminars, coaching, and events</span></div>
+        </div>
+        <div class="subscription-popup-actions">
+          <a class="button primary" href="member/?v=member-nav-full-0912#member-subscribe" data-subscription-accept>Subscribe for Access</a>
+          <button class="subscription-popup-later" type="button" data-subscription-close>Not now</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

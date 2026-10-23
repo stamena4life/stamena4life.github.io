@@ -35,3 +35,58 @@ if (mailForm) {
     window.location.href = href;
   });
 }
+
+const subscriptionPopup = document.querySelector("[data-subscription-popup]");
+
+if (subscriptionPopup) {
+  const storageKey = "stamena4life-subscription-popup-seen-v5";
+  const previewPopup = window.location.hash === "#preview-subscribe";
+  const closeButtons = subscriptionPopup.querySelectorAll("[data-subscription-close]");
+  const subscribeLink = subscriptionPopup.querySelector("[data-subscription-accept]");
+  const closeButton = subscriptionPopup.querySelector(".subscription-popup-close");
+  let popupSeen = false;
+
+  try {
+    popupSeen = window.localStorage.getItem(storageKey) === "true";
+  } catch {
+    popupSeen = false;
+  }
+
+  const rememberPopup = () => {
+    try {
+      window.localStorage.setItem(storageKey, "true");
+    } catch {
+      // The popup still works when browser storage is unavailable.
+    }
+  };
+
+  const closePopup = () => {
+    subscriptionPopup.hidden = true;
+    document.body.classList.remove("subscription-popup-open");
+  };
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closePopup);
+  });
+
+  if (subscribeLink) {
+    subscribeLink.addEventListener("click", closePopup);
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !subscriptionPopup.hidden) {
+      closePopup();
+    }
+  });
+
+  if (!popupSeen || previewPopup) {
+    window.setTimeout(() => {
+      subscriptionPopup.hidden = false;
+      document.body.classList.add("subscription-popup-open");
+      if (!previewPopup) {
+        rememberPopup();
+      }
+      closeButton?.focus();
+    }, 1200);
+  }
+}
